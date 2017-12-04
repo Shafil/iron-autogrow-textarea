@@ -341,7 +341,8 @@ Custom property | Description | Default
       }
 
       this.bindValue = value;
-      this.$.mirror.innerHTML = this._valueForMirror();
+      //mirror is removed due to low performance
+      //this.$.mirror.innerHTML = this._valueForMirror();
 
       // This code is from early 1.0, when this element was a type extension.
       // It's unclear if it's still needed, but leaving in in case it is.

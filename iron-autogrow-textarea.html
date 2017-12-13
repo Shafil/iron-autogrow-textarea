@@ -12,6 +12,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../iron-behaviors/iron-control-state.html">
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../iron-validatable-behavior/iron-validatable-behavior.html">
+<link rel="import" href="../../src/elements/bedrock-style-manager/styles/bedrock-styles-scroll-bar.html"/>
+
 
 <!--
 `iron-autogrow-textarea` is an element containing a textarea that grows in height as more
@@ -38,7 +40,7 @@ Custom property | Description | Default
 
 <dom-module id="iron-autogrow-textarea">
   <template>
-    <style>
+    <style include="bedrock-styles-scroll-bar">
       :host {
         display: inline-block;
         position: relative;
@@ -341,7 +343,7 @@ Custom property | Description | Default
       }
 
       this.bindValue = value;
-      this.$.mirror.innerHTML = this._valueForMirror();
+     // this.$.mirror.innerHTML = this._valueForMirror();
 
       // This code is from early 1.0, when this element was a type extension.
       // It's unclear if it's still needed, but leaving in in case it is.
